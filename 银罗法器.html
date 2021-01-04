@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+      width: 500px;
+      height: 500px;
+      margin: 100px 0 0 300px;
+      /* background: linear-gradient(to right,#bbb,#555); */
+    }
+    li:nth-child(1) {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      animation: wtt 3s linear 0s infinite alternate;
+    }
+    li:nth-child(2) {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      animation: wtt 3s linear 1s infinite alternate;
+    }
+    li:nth-child(3) {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      animation: wtt 3s linear 2s infinite alternate;
+    }
+    li:nth-child(4) {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      animation: wtt 3s linear 3s infinite alternate;
+      transition: all 10s ease 0s;
+    }li:nth-child(5) {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      animation: wtt 3s linear 4s infinite alternate;
+      transition: all 10s ease 0s;
+    }li:nth-child(6) {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      animation: wtt 3s linear 5s infinite alternate;
+      transition: all 10s ease 0s;
+    }li:nth-child(7) {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      animation: wtt 3s linear 6s infinite alternate;
+      transition: all 10s ease 0s;
+    }
+    li:nth-child(4):hover {
+      width: 50px;
+      background-color: white;
+      transition: all 10s ease 0s;
+
+    }
+
+    @keyframes wtt {
+      0% {width: 10px; background-color: #000;}
+      50% {width: 50px; height: 20px; background-color: #999; transform: translate(120px,500px);}
+      80% {width: 100px; background-color: #fff;transform: rotate(90deg);font-size: 30px;text-align: center; line-height: 20px;}
+      100% {width: 100px;height: 100px;box-shadow: 0 0 5px 10px black;}
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+</body>
+
+</html>

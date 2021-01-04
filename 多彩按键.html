@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>流光按钮</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: black;
+    }
+    a {
+      width: 400px;
+      height: 100px;
+      border-radius: 50px;
+      line-height: 100px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 24px;
+      background: linear-gradient(90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+      /* 指定背景的 长度；  background-size:100px 100px; 指定背景图的 长、宽 */
+      background-size: 400%; 
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    a:hover {
+      animation: sun 8s infinite;
+    }
+    /* 发光层 */
+    a::before {
+      content: "";
+      /* 通过定位 以父元素为基准 设置 元素大小 */
+      position: absolute;
+      /* left: -5px;
+      right: -5px;
+      top: -5px;
+      bottom: -5px; */
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      background: linear-gradient(90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+      /* ?????? */
+      background-size: 400%; 
+      border-radius: 50px;
+      
+      z-index: -1;
+    }
+    a:hover::before {
+      filter: blur(30px);
+      animation: sun 8s infinite;
+    }
+
+    @keyframes sun {
+      100% {
+        background-position: -400% 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="javascript:;">sunbutton</a>
+</body>
+</html>
